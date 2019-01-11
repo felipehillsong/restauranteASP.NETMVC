@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model Restaurante.Models.Pedido
+
+<div class="row">
+
+    @using (Html.BeginForm("Pedidos", "Restaurante", FormMethod.Post)) {
+
+        <br />
+        <label>Para Comer</label>
+        <div class="col-sm-2">
+            @Html.TextBoxFor(m => m.NomeProduto)
+        </div>
+        <br />
+
+        <label>Para Beber</label>
+        <div class="col-sm-2">
+            <input type="text" name="ebebida" id="ebebida" class="form-control" />
+        </div>
+        <br />
+
+        <input type="submit" value="Enviar" />
+    }
+</div>
