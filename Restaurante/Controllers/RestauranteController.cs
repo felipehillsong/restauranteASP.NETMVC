@@ -20,7 +20,8 @@ namespace Restaurante.Controllers
             pedido.Bebidas = "Coca";
             pedido.QtdBebidas = 1;
             pedido.Sobremesas = "Sorvete";
-            pedido.QtdSobremesas = 1;
+            pedido.QtdSobremesas = 1;    
+             
 
             pedidos.Add(pedido);           
 
@@ -37,8 +38,8 @@ namespace Restaurante.Controllers
             int QntdBebida = person.QtdBebidas;
             string nomeSobremesa = person.Sobremesas;
             int QntdSobremesa = person.QtdSobremesas;
-            
-             
+
+
 
             string MyConnection2 = "datasource=localhost;port=3306;username=root;password=root";
 

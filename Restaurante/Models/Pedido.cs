@@ -19,7 +19,9 @@ namespace Restaurante.Models {
 
         public string Sobremesas { get; set; }
 
-        public int QtdSobremesas { get; set; }        
+        public int QtdSobremesas { get; set; }
+
+        public DateTime tempo = DateTime.Now;
 
     }
 }
