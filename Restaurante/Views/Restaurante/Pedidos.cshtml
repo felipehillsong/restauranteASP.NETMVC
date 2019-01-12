@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<Restaurante.Models.Pedido>
 @{
-    ViewData["Title"] = "Pedidos";
+    ViewData["Title"] = "Pedidos Cozinha";
 }
 
 <h2>Pedidos</h2>
@@ -9,15 +9,24 @@
 <table class="table">
     <thead>
         <tr>
-            <th>Id</th>
-            <th>Produto</th>
+            <th>Nome do Cliente</th>
+            <th>Mesa do Cliente</th>
+            <th>Pedidos</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var pedido in Model) {
             <tr>
                 <td>
-                    @pedido.NomeProduto
+                    @pedido.Nome
+                    @pedido.Mesa
+                    @pedido.Pratos
+                    @pedido.QtdPratos
+                    @pedido.Bebidas
+                    @pedido.QtdBebidas
+                    @pedido.Sobremesas
+                    @pedido.QtdSobremesas
+
                 </td>
             </tr>
         }

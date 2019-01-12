@@ -12533,11 +12533,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Felipe\\source\\repos\\Restaurante\\Restaurante\\Restaurante.csproj",
+      "projectUniqueName": "C:\\Users\\Felipe\\source\\repos\\restauranteASP.NETMVC\\Restaurante\\Restaurante.csproj",
       "projectName": "Restaurante",
-      "projectPath": "C:\\Users\\Felipe\\source\\repos\\Restaurante\\Restaurante\\Restaurante.csproj",
+      "projectPath": "C:\\Users\\Felipe\\source\\repos\\restauranteASP.NETMVC\\Restaurante\\Restaurante.csproj",
       "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Felipe\\source\\repos\\Restaurante\\Restaurante\\obj\\",
+      "outputPath": "C:\\Users\\Felipe\\source\\repos\\restauranteASP.NETMVC\\Restaurante\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

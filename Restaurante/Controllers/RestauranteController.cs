@@ -12,20 +12,33 @@ namespace Restaurante.Controllers
         public IActionResult Pedidos()
         {
             List<Pedido> pedidos = new List<Pedido>();
-            var testePedido = new Pedido();
-            testePedido.NomeProduto = "FelipeTeste";
+            var pedido = new Pedido();
+            pedido.Nome = "Felipe";
+            pedido.Mesa = 1;
+            pedido.Pratos = "Macarrão";
+            pedido.QtdPratos = 1;
+            pedido.Bebidas = "Coca";
+            pedido.QtdBebidas = 1;
+            pedido.Sobremesas = "Sorvete";
+            pedido.QtdSobremesas = 1;
 
-            pedidos.Add(testePedido);
-
-
-           
+            pedidos.Add(pedido);           
 
             return View(pedidos);
         }
         
         [HttpPost]
         public ActionResult Pedidos(Pedido person) {
-            string nomeProduto = person.NomeProduto;
+            string nomeCliente = person.Nome;
+            int numeroMesa = person.Mesa;
+            string nomePrato = person.Pratos;
+            int QntdPrato = person.QtdPratos;
+            string nomeBebida = person.Bebidas;
+            int QntdBebida = person.QtdBebidas;
+            string nomeSobremesa = person.Sobremesas;
+            int QntdSobremesa = person.QtdSobremesas;
+            
+             
 
             string MyConnection2 = "datasource=localhost;port=3306;username=root;password=root";
 
