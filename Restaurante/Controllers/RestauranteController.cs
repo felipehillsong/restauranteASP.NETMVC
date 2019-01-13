@@ -15,7 +15,12 @@ namespace Restaurante.Controllers
         public RestauranteController(IPedidoRepository pedidoRepository) {
             _pedidoRepository = pedidoRepository;
         }
-        
+
+        [HttpGet]
+        public ActionResult Pedidos() {
+            return View(_pedidoRepository.GetAll());
+        }
+
         [HttpPost]
         public ActionResult Pedidos(Pedido pedido) {
             _pedidoRepository.Add(pedido);
