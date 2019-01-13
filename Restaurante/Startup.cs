@@ -7,8 +7,12 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Restaurante.Interface;
+using Restaurante.Models;
+using Restaurante.Repository;
 
 namespace Restaurante {
     public class Startup {
@@ -26,6 +30,10 @@ namespace Restaurante {
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddScoped<IPedidoRepository, PedidoRepository>();
+
+            var connection = Configuration["ConexaoMySql:MySqlConnectionString"];
+            services.AddDbContext<RestauranteContext>(options => options.UseMySql(connection));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
